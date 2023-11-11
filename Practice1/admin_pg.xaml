@@ -1,0 +1,36 @@
+﻿<Window x:Class="Practice1.admin_pg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice1"
+        mc:Ignorable="d"
+        Title="Admin Page" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Content="Back" Click="Back_Click"/>
+
+        <DataGrid Grid.Row="1" x:Name="datagrid" />
+        <TextBlock Text="Название" Grid.Row="3"/>
+        <TextBox x:Name="nametbx" Grid.Row="4"/>
+        <TextBlock Text="Цена" Grid.Row="5"/>
+        <TextBox x:Name="pricetbx" Grid.Row="6"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Content="Add" Click="Add_Click"/>
+            <Button Content="Delete" Click="Delete_Click"/>
+            <Button Content="Update" Click="Update_Click"/>
+            <Button Content="Import" Click="Import_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
